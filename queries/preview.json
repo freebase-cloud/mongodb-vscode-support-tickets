@@ -1,0 +1,26 @@
+[
+  {
+    "phase": "seed",
+    "query": "{\"insert\":\"fbx_mongodb_000000000000000000000000\",\"documents\":[{\"id\":1,\"subject\":\"Login issue\",\"priority\":3},{\"id\":2,\"subject\":\"Invoice copy\",\"priority\":1},{\"id\":3,\"subject\":\"Sync failure\",\"priority\":4}]}"
+  },
+  {
+    "phase": "read",
+    "query": "{\"find\":\"fbx_mongodb_000000000000000000000000\",\"filter\":{},\"limit\":100}"
+  },
+  {
+    "phase": "update",
+    "query": "{\"update\":\"fbx_mongodb_000000000000000000000000\",\"updates\":[{\"q\":{\"id\":1},\"u\":{\"$set\":{\"priority\":13}},\"multi\":false}]}"
+  },
+  {
+    "phase": "verify",
+    "query": "{\"find\":\"fbx_mongodb_000000000000000000000000\",\"filter\":{\"id\":1},\"limit\":100}"
+  },
+  {
+    "phase": "delete",
+    "query": "{\"delete\":\"fbx_mongodb_000000000000000000000000\",\"deletes\":[{\"q\":{\"id\":2},\"limit\":1}]}"
+  },
+  {
+    "phase": "cleanup",
+    "query": "{\"drop\":\"fbx_mongodb_000000000000000000000000\"}"
+  }
+]

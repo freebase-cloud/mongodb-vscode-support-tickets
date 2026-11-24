@@ -1,0 +1,7 @@
+{
+  "name": "mongodb-vscode-support-tickets",
+  "engine": "mongodb",
+  "slug": "mongodb",
+  "kind": "application",
+  "useCase": "support-tickets"
+}
